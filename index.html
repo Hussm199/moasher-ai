@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOASHER AI</title>
+<script src="https://s3.tradingview.com/tv.js"></script>
+<style>
+body{
+margin:0;
+background:#0d1117;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+header{
+padding:15px;
+font-size:22px;
+background:#161b22;
+font-weight:bold;
+}
+#chart{
+height:80vh;
+}
+.signal{
+padding:15px;
+font-size:18px;
+background:#1f2937;
+}
+.buy{color:#00ff88;}
+.sell{color:#ff4d4d;}
+</style>
+</head>
+
+<body>
+
+<header>MOASHER AI - Live Gold Chart</header>
+
+<div id="chart"></div>
+
+<div class="signal">
+<span class="buy">Entry:  --</span> |
+<span>SL: --</span> |
+<span>TP: --</span>
+</div>
+
+<script>
+new TradingView.widget({
+container_id: "chart",
+width: "100%",
+height: "100%",
+symbol: "OANDA:XAUUSD",
+interval: "15",
+timezone: "Etc/UTC",
+theme: "dark",
+style: "1",
+locale: "ar",
+toolbar_bg: "#0d1117",
+enable_publishing: false,
+hide_top_toolbar: false,
+hide_legend: false
+});
+</script>
+
+</body>
+</html>
